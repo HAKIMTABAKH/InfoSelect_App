@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.signInPage"
+    android:background="@color/blue">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/arrowleft"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titre1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="45dp"
+        android:fontFamily="@font/nunito_bold"/>
+
+    <TextView
+        android:id="@+id/textdescpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titre1"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="Veuillez entrer vos informations pour commencer !" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="620dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-39dp"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@color/white"
+        tools:ignore="VisualLintBounds">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                app:endIconContentDescription="Toggle visibility"
+                app:endIconMode="custom"
+                style="@style/CustomTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="40"
+                    android:paddingStart="20dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nunito"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:endIconMode="password_toggle"
+                style="@style/CustomTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:paddingStart="20dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nunito"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/forgetlink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:text="Forgot Password ?"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito_semibold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signInbtn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="24dp"
+                android:backgroundTint="@color/blue"
+                android:elevation="40dp"
+                android:textAllCaps="false"
+                android:text="Sign In"
+                android:background="@drawable/blue_background"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/nunito_semibold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_background"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gris"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/googleicon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/googleicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Continue with Google"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nunito_semibold" />
+
+                    <ImageView
+                        android:id="@+id/fleshgoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/arrowright" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="24sp"
+                android:background="@drawable/button_background"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gris"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/facebookicon" />
+
+                    <TextView
+                        android:id="@+id/titleText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Continue with Facebook"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nunito_semibold" />
+
+                    <ImageView
+                        android:id="@+id/fleshfacebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/arrowright" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

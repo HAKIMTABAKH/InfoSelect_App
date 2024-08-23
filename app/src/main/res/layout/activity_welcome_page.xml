@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.welcomePage"
+    android:background="@color/blue">
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/arrowleft"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="570dp"
+        android:src="@drawable/logo" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-39dp"
+        app:cardCornerRadius="45dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titre1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenue"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/nunito_bold" />
+
+            <TextView
+
+                android:textColor="@color/black"
+                android:id="@+id/textdescpt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titre1"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/nunito"
+                android:text="@string/welcome_text"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signInbtn"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/textdescpt"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="30dp"
+                android:text="Sign In"
+                android:textColor="@color/white"
+                android:background="@drawable/blue_background"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/nunito_semibold"
+                android:backgroundTint="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signUpbtn"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/textdescpt"
+                android:layout_toEndOf="@id/signInbtn"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="30dp"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:background="@drawable/blue_background"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/nunito_semibold"
+                android:backgroundTint="@color/blue" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

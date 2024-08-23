@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/applogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.InfoSelect"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.SystemeAlarmeView"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.VideoSurvillanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity$LogicielView"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Logiciel_view"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Pc_view"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PcViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.categories_activity"
+            android:exported="false" />
+        <activity
+            android:name=".categorieActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CartActivity$CategoriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Detail_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.forgetPasswordPage"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.signUpPage"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.signInPage"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.welcomePage"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.splashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="Activity.signUpPage"
+            tools:ignore="MissingClass" />
+    </application>
+
+</manifest>
