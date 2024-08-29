@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -46,12 +47,15 @@ public class MainActivity extends AppCompatActivity {
         voirToutIcon.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, categories_activity.class)));
         pcIconBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, PcViewActivity.class)));
         LogicielIconBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Logiciel_view.class)));
+        AccessoireIconBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, SystemeAlarmeView.class)));
         //AccessoireIconBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Logiciel_view.class)));
 
     }
     private void bottomNavigation() {
         binding.cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, CartActivity.class)));
         binding.profileBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, welcomePage.class)));
+        binding.wishlistbtn.setOnClickListener(v -> Toast.makeText(this, "this is not avalable", Toast.LENGTH_SHORT).show());
+        binding.explorerbtn.setOnClickListener(v -> Toast.makeText(this, "this is not avalable", Toast.LENGTH_SHORT).show());
     }
 
     private void statusBarColor() {
@@ -85,24 +89,21 @@ public class MainActivity extends AppCompatActivity {
         binding.PopularView.setAdapter(adapter);
 
         ArrayList<PopularDomain> items2 = new ArrayList<>();
-        items2.add(new PopularDomain("Camera HDTVI box", "cam1", 20, 4.7, 207, "Camera HDTVI box,\n" +
-                "1/2.8\" CMOS, 2MP\n" +
-                "3.6mm, 6mm, 8mm optionnel\n" +
-                "0.01Lux, 25Fps@1080P,\n" +
-                "AWB, AGC, BLC,\n" +
-                "Filtre Infrarouge ICR, IR 25m,\n" +
-                "Smart IR, IP66, DC12V"));
+        items2.add(new PopularDomain("Sac A dos PORT", "sacc7", 7, 3.6, 120, "REF: 0743\n" +
+                "Sac A dos PORT"));
+        items2.add(new PopularDomain("Sac A dos PORT 15.6Noir", "sacc8", 10, 3.7, 25, "REF :3735\n" +
+                "Sac A dos PORT 15.6 Noir\n"));
 
-        items2.add(new PopularDomain("Camera HDTVI box", "cam2", 25, 4.4, 283, "Camera HDTVI box ;\n" +
-                "1/2.8\" CMOS, 1,3MP\n" +
-                "4mm, 6mm, 8mm optionnel\n" +
-                "0.01Lux, 25Fps@960P,\n" +
-                "AWB, AGC, BLC,\n" +
-                "Filtre Infrarouge ICR, IR 50m,\n" +
-                "Smart IR, IP66, DC12V"));
-
-        items2.add(new PopularDomain("IP SPEEDDOME SONY", "cam3", 15, 4.6, 3300, "IP SPEEDDOME 1/3\"SONY CMOS 1.3MPXH.264 & MJPEG dual-stream encoding and JPEG image capture,25fps@1.3MPX 1280*960IR 100m(IR ON) DWDR,Day/Night(ICR),DNR(2D&3D),Auto Iris,Auto focus,AWB,AGC,BLCMax 150°/s pan speed, 360° continuous pan rotation IP66AC24V3A ZOOM optique18X f=4.7 mm~84.6mm"));
-
+        items2.add(new PopularDomain("Detecteur de Gaz sans fil", "alarme11", 10, 4.5, 125, "REF : 2578\n" +
+                "Detecteur de Gaz sans fil Gas -88 Code"));
+        items2.add(new PopularDomain("Systeme alarme filaire TELETEK", "alarme12", 15, 4.0, 1160, "Prix d'installation et câblage selon l'étude\n" +
+                "\n" +
+                "Centrale d'alarme 8 Zones programmables.\n" +
+                "Clavier distant avec écran LCD.\n" +
+                "2 Détecteurs de mouvement IR numérique .\n" +
+                "Contact porte/fenêtre (plastique blanc).\n" +
+                "Sirène Externe .\n" +
+                "Batterie"));
         binding.PopularView1.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         PopularAdapter adapter2 = new PopularAdapter(items2);
         binding.PopularView1.setAdapter(adapter2);

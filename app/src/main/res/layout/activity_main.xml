@@ -239,14 +239,14 @@
                         android:layout_width="54dp"
                         android:layout_height="54dp"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/cat2" />
+                        app:srcCompat="@drawable/systemalarme" />
 
                     <TextView
                         android:id="@+id/text15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Accessoires"
+                        android:text="System alame"
                         android:layout_gravity="center"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
@@ -350,6 +350,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/explorerbtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="6dp"
@@ -381,7 +382,9 @@
                     android:layout_marginTop="6dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:id="@+id/wishlistbtn"
+                    >
 
                     <ImageView
                         android:id="@+id/wishlisticon"
